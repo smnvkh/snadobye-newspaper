@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'Kazimir';
+    src:
+        url('Kazimir-Medium.woff2') format('woff2'),
+        url('Kazimir-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: medium;
+  }
+@font-face {
+	font-family: 'Vinque';
+	src:
+        url('../fonts/vinque.woff2') format('woff2'),
+        url('../fonts/vinque.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Ubuntu';
+    src: 
+        url('ubuntulight.woff2') format('woff2'), 
+        url('ubuntulight.woff') format('woff');
+    font-weight: 300;
+    font-style: light;
+}
+@font-face {
+    font-family: 'MV-WEEKEND';
+    src:
+        url('MV-WEEKEND.woff2') format('woff2'),
+        url('MV-WEEKEND.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Unageo';
+    src:
+        url('Unageo-Medium.woff2') format('woff2'),
+        url('Unageo-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: medium;
+}
+@font-face {
+    font-family: 'GG-Kizhich';
+    src:
+        url('GG-Kizhich-Bold.woff2') format('woff2'),
+        url('GG-Kizhich-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: bold;
+}
+@font-face {
+    font-family: 'Dudka';
+    src:
+        url('DudkaBold.woff2') format('woff2'),
+        url('DudkaBold.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Bartina';
+    src:
+        url('bartina.woff') format('woff'),
+        url('bartina.woff2') format('woff2'); 
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Soroka';
+    src:
+        url('soroka.woff2') format('woff2'),
+        url('soroka.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Kablammo';
+    src:
+        url('Kablammo-Regular.woff2') format('woff2'),
+        url('Kablammo-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Overdoze_sans';
+    src:
+        url('overdozesans.woff2') format('woff2'),
+        url('overdozesans.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Bergamasco';
+    src:
+        url('BergamascoRegular.woff2') format('woff2'),
+        url('BergamascoRegular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Leporid';
+    src:
+        url('Leporid.woff') format('woff'),
+        url('Leporid.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CATLinz';
+    src:
+        url('CATLinz_1.8.woff2') format('woff2'),
+        url('CATLinz_1.8.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
