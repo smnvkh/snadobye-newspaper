@@ -1,0 +1,269 @@
+body {
+    background-color: #DFDFDF;
+    font-family: 'Ubuntu';
+    font-weight: 300;
+    color: #3D3D3D; 
+}
+
+.header {
+    font-family: 'Kazimir';
+    font-weight: 500;
+}
+
+.running_title {
+    font-size: 2vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2vw 3vw 0;
+}
+
+.header {
+    flex-direction: column;
+}
+
+.title {
+    font-size: 13.5vw;
+    margin: 1vw 0 0 19vw;
+}
+
+.subtitle {
+    font-size: 3.2vw;
+    margin-left: 30vw;
+}
+
+.columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 4vw 2vw 0;
+}
+
+/* левая и правая колонки */
+
+.snake, .snake img, .coupon, .coupon img, .spell, .spell img, .pot, .pot img, .pro, .pro img, .discount, .discount img, .tarot, .tarot img, .lovespell, .lovespell img, .drawing, .drawing img {
+    width: 26.5vw;
+    margin-bottom: 2.1vw;
+}
+
+/* шепот змеи */
+
+.snake {
+    height: 24.1vh;
+}
+
+.snake_description {
+    margin: -14vw 4vw 0 4.4vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.snake_title {
+    font-family: 'Vinque';
+    font-weight: 400;
+    font-size: 3.4vw;
+}
+
+.snake_subtitle {
+    margin-top: 0.4vw;
+    font-size: 1.4vw;
+}
+
+.snake_adress {
+    font-size: 0.9vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1.8vw 0 0 -0.3vw;
+}
+
+/* купон на скидку */
+
+.coupon {
+    height: 50vw
+}
+
+.coupon_description {
+    margin: -51.3vw 1vw 0 1.3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.coupon_title, .coupon_percent, .coupon_subtitle {
+    font-family: 'MV-WEEKEND';
+    font-weight: 400;
+}
+
+.coupon_title {
+    font-size: 4vw;
+}
+
+.coupon_percent {
+    font-size: 14.2vw;
+}
+
+.coupon_subtitle {
+    font-size: 2.6vw;
+    margin-top: -1.3vw;
+}
+
+.coupon_text {
+    font-size: 1.3vw;
+    text-align: center;
+    margin-top: 3vw;
+}
+
+.coupon_adress {
+    font-size: 0.9vw;
+    display: flex;
+    flex-direction: row;
+    align-self: start;
+    margin-top: 4.2vw;
+}
+
+#coupon_floor {
+    margin-left: 13vw;
+}
+
+.coupon_description img {
+    width: 20vw;
+    margin-top: 2.5vw;
+}
+
+/* грибы и цветы */
+
+.mushrooms_and_flowers {
+    display: flex;
+    flex-direction: row;
+}
+
+.mushrooms {
+    display: flex;
+    flex-direction: column;
+}
+
+.flowers {
+    display: flex;
+    flex-direction: column;
+}
+
+#first_mushroom {
+    width: 19vw;
+    margin-top: -48vw;
+    margin-left: -1vw;
+}
+
+#third_mushroom {
+    width: 19vw;
+    margin-top: -19vw;
+    margin-left: 10vw;
+}
+
+#second_mushroom {
+    width: 14vw;
+    margin-top: -8vw;
+    margin-left: 15vw;
+}
+
+#fourth_mushroom {
+    width: 19vw;
+    margin-top: -5vw;
+    margin-left: 8vw;
+}
+
+#narcissus {
+    width: 19vw;
+    margin-top: -21vw;
+    margin-left: -29.5vw;
+}
+
+#iris {
+    width: 14vw;
+    margin-top: -36vw;
+    margin-left: -29vw;
+}
+
+#seaweed {
+    width: 14vw;
+    margin-top: -28vw;
+    margin-left: -18vw;
+}
+
+#waterplant {
+    width: 16vw;
+    margin-top: 3vw;
+    margin-left: -25vw;
+}
+
+/* заклинание */
+
+.spell {
+    height: 17vw;
+}
+
+.spell p {
+    font-family: 'Unageo';
+    font-weight: 500;
+    font-size: 1vw;
+    text-align: center;
+    margin-top: -18vw;
+}
+
+/* котел */
+
+.pot {
+    height: 30vw
+}
+
+.pot_description img {
+    width: 16.2vw;
+    margin-top: 2vw;
+}
+
+.pot_description {
+    margin: -31vw 1.4vw 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pot_title {
+    font-family: 'GG-Kizhich';
+    font-weight: 700;
+    font-size: 2.3vw;
+    text-align: center;
+}
+
+.pot_subtitle {
+    font-size: 1.4vw;
+    margin-top: 1.2vw;
+    text-align: center;
+}
+
+.pot_adress {
+    font-size: 0.9vw;
+    display: flex;
+    flex-direction: row;
+    align-self: start;
+    margin-top: -2vw;
+    margin-left: 0.6vw;
+}
+
+#pot_street {
+    margin-left: 9.5vw;
+}
+
+/* профи-колдуны */
+
+.pro {
+    height: 5vw
+}
+
+.pro p {
+    font-family: 'Crosterian';
+    font-weight: 400;
+    font-size: 1.7vw;
+    text-align: center;
+    margin-top: -6.3vw;
+}
