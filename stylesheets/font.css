@@ -103,14 +103,6 @@
     font-style: normal;
 }
 @font-face {
-    font-family: 'Leporid';
-    src:
-        url('../fonts/Leporid.woff') format('woff'),
-        url('../fonts/Leporid.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
     font-family: 'CATLinz';
     src:
         url('../fonts/CATLinz_1.8.woff2') format('woff2'),

@@ -15,7 +15,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 2vw 3vw 0;
+    margin: 2vw 2.2vw 0;
 }
 
 .header {
@@ -49,7 +49,7 @@ body {
 /* шепот змеи */
 
 .snake {
-    height: 24.1vh;
+    height: 14.7vw;
 }
 
 .snake_description {
@@ -207,7 +207,7 @@ body {
     font-weight: 500;
     font-size: 1vw;
     text-align: center;
-    margin-top: -18vw;
+    margin-top: -18.1vw;
 }
 
 /* котел */
@@ -266,4 +266,451 @@ body {
     font-size: 1.7vw;
     text-align: center;
     margin-top: -6.3vw;
+}
+
+/* второй столбик */
+
+.fortune, .fortune img, .healing, .stars, .stars img, .market, .market img, .lawyer, .lawyer img {
+    width: 38.8vw;
+    margin-bottom: 2.1vw;
+}
+
+/* гадальный шар */
+
+.fortune {
+    height: 24.4vw;
+}
+
+.fortune img {
+    height: 24.4vw;
+}
+
+.divination_description {
+    font-size: 0.9vw;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.divination_sponsor {
+    align-self: center;
+    margin-top: -26.3vw;
+}
+
+.divination_text {
+    display: flex;
+    flex-direction: column;
+}
+
+#divination_title {
+    font-family: 'Dudka';
+    font-weight: 400;
+    font-size: 2.5vw;
+    margin: 4.2vw 0 1.5vw 2vw;
+}
+
+#divination_subtitle {
+    font-size: 1.7vw;
+    margin-left: 2vw;
+}
+
+.magicball img {
+    width: 15vw;
+    margin-left: 21.3vw;
+    margin-top: -18.8vw;
+}
+
+.divination_adress {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    margin-top: -4vw;
+    margin-left: 1vw;
+}
+
+#divination_street {
+    margin-left: 23vw;
+}
+
+/* исцеление от неразделенной любви */
+
+.healing {
+    display: flex;
+    flex-direction: column;
+    height: 8.9vw;
+}
+
+.healing_title {
+    font-family: 'Bartina';
+    font-weight: 400;
+    font-size: 2.8vw;
+}
+
+.healing_subtitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1.4vw;
+}
+
+#healing_description {
+    font-size: 1.5vw;
+    margin-right: -7vw;
+}
+
+#healing_heartplant img {
+    width: 14vw;
+    margin-right: -7vw;
+    margin-top: -4.7vw;
+}
+
+#healing_street {
+    font-size: 0.9vw;
+    margin-top: 3.5vw;
+}
+
+/* звездная пыль */
+
+.stars {
+    height: 39.8vw;
+}
+
+.stars_content {
+    display: flex;
+    flex-direction: column;
+}
+
+.stars_hand {
+    display: flex;
+    flex-direction: column;
+}
+
+#glass img {
+    width: 6.5vw;
+}
+
+#glass {
+    margin-top: -25.5vw;
+    margin-left: 8.5vw;
+}
+
+#hand img {
+    width: 22vw;
+}
+
+#hand {
+    margin-top: -39.1vw;
+    margin-left: 1.5vw;
+}
+
+.stars_price {
+    display: flex;
+    flex-direction: row;
+    margin-top: -32vw;
+    margin-left: 20.9vw;
+}
+
+.stars_price img {
+    width: 16.3vw;
+} 
+
+.cost {
+    display: flex;
+    flex-direction: row;
+}
+
+.cost img {
+    width: 1.1vw;
+}
+
+.cost p {
+    font-family: 'Soroka';
+    font-weight: 400;
+    font-size: 3.2vw;
+    margin-left: -12.5vw;
+    margin-top: 3.4vw;
+}
+
+.stars_description {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    margin-right: 1.6vw;
+}
+
+#stars_preheader {
+    font-size: 1.5vw;
+    margin-top: 0.4vw;
+}
+
+#stars_title {
+    font-family: 'Soroka';
+    font-weight: 400;
+    font-size: 2.4vw;
+    margin-top: 1.2vw;
+}
+
+#stars_subtitle {
+    font-size: 2vw;
+    margin-top: 1vw;
+}
+
+/* магический рынок */
+
+.market {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.market_adress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#market_title {
+    font-family: 'Kablammo';
+    font-weight: 400;
+    font-size: 4.1vw;
+    margin-top: -1vw;
+}
+
+#market_subtitle {
+    font-size: 1.3vw;
+    margin-top: 0.7vw;
+}
+
+#market_line img {
+    margin-top: 1vw;
+}
+
+#market_location {
+    margin-top: -4vw;
+    font-size: 1.3vw;
+}
+
+/* юридические услуги */
+
+.lawyer {
+    height: 35.5vw;
+}
+
+.lawyer img {
+    margin-top: 0.3vw;
+}
+
+.lawyer_paragraphs {
+    display: flex;
+    flex-direction: column;
+}
+
+#lawyer_title {
+    font-family: 'Overdoze_sans';
+    font-weight: 400;
+    font-size: 5.4vw;
+    margin-top: -36.6vw;
+    margin-left: 1vw;
+}
+
+#lawyer_firstp, #lawyer_secondp, #lawyer_thirdp {
+    font-size: 1.5vw;
+    margin-left: 1vw;
+    margin-top: 1.3vw;
+    margin-bottom: 1.5vw;
+}
+
+.frog img {
+    width: 24vw;
+}
+
+.frog {
+    margin-left: 13vw;
+    margin-top: -24vw;
+}
+
+/* скидка на все отвары */
+
+.discount {
+    height: 39vw;
+}
+
+.discount_description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.discount_title, .discount_subtitle {
+    font-family: 'Bergamasco';
+    font-weight: 400;
+}
+
+.discount_title {
+    font-size: 5.5vw;
+    margin-top: -36vw;
+}
+
+.discount_subtitle {
+    font-size: 2vw;
+    margin-top: -0.3vw;
+}
+
+.discount_potions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#left_potion img {
+    width: 6.6vw;
+    margin-top: 2.6vw;
+}
+
+#mid_potion img {
+    width: 7.7vw;
+    margin-top: 2.6vw;
+}
+
+#right_potion img {
+    width: 3.8vw;
+    margin-top: 2.5vw;
+}
+
+#right_potion {
+    margin-left: 1vw;
+}
+
+.discount_adress {
+    font-size: 1vw;
+    margin-top: 0.3vw;
+}
+
+/* таро дня */
+
+.tarot {
+    height: 43vw;
+}
+
+.tarot_description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Kazimir';
+    font-weight: 500;
+    font-size: 3vw;
+    color: #DFDFDF;
+}
+
+#tarot_number {
+    margin-top: -44.7vw;
+}
+
+#tarot_flower img {
+    width: 22vw;
+    margin-top: 2.5vw;
+    margin-left: 2vw;
+}
+
+#tarot_title {
+    margin-top: 0.2vw;
+}
+
+/* требуется приворот */
+
+.lovespell {
+    height: 19.4vw;
+}
+
+.lovespell img {
+    margin-top: -0.3vw;
+}
+
+.lovespell_description {
+    display: flex;
+    flex-direction: column;
+}
+
+.insects {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: -22.6vw;
+}
+
+.insects img {
+    width: 8vw;
+}
+
+#left_insect {
+    margin-left: 0.3vw;
+}
+
+#right_insect {
+    margin-right: 0.3vw;
+}
+
+.lovespell_title img {
+    width: 16vw;
+    margin-left: 5vw;
+    margin-top: -3vw;
+}
+
+.lovespell_subtitle {
+    font-size: 1.2vw;
+    margin-top: -2vw;
+    text-align: center;
+}
+
+.lovespell_phone {
+    font-size: 1.2vw;
+    margin-top: 1vw;
+    margin-left: 7.5vw;
+}
+
+/* нарисуй цветок */
+
+.drawing {
+    height: 17.6vw;
+}
+
+.drawing_description {
+    display: flex;
+    flex-direction: column;
+}
+
+.drawing_title {
+    font-family: 'CATLinz';
+    font-weight: 400;
+    font-size: 1.5vw;
+    text-align: center;
+    margin-top: -18.1vw;
+}
+
+.drawing_adress {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 0.9vw;
+    margin-top: 11.6vw;
+}
+
+#drawing_name {
+    margin-left: 1.7vw;
+}
+
+#drawing_street {
+    margin-right: 1.7vw;
+}
+
+/* футер */
+
+.footer {
+    font-family: 'Kazimir';
+    font-weight: 500;
+    font-size: 2vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2vw 2.2vw 2vw;
 }
