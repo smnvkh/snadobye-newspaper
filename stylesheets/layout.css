@@ -77,6 +77,13 @@ body {
     margin: 1.8vw 0 0 -0.3vw;
 }
 
+/* шепот змеи: анимация */
+
+.snake img:hover {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
 /* купон на скидку */
 
 .coupon {
@@ -133,67 +140,66 @@ body {
 
 /* грибы и цветы */
 
-.mushrooms_and_flowers {
-    display: flex;
-    flex-direction: row;
-}
-
-.mushrooms {
-    display: flex;
-    flex-direction: column;
-}
-
-.flowers {
-    display: flex;
-    flex-direction: column;
+.draggable {
+    position: absolute;
+    top: 57vw;
+    left: 5vw;
 }
 
 #first_mushroom {
     width: 19vw;
-    margin-top: -48vw;
-    margin-left: -1vw;
-}
-
-#third_mushroom {
-    width: 19vw;
-    margin-top: -19vw;
-    margin-left: 10vw;
+    position: relative;
+    top: -13vw;
+    left: -4vw;
 }
 
 #second_mushroom {
-    width: 14vw;
-    margin-top: -8vw;
-    margin-left: 15vw;
+    width: 21vw;
+    position: relative;
+    top: -9vw;
+    left: 6vw;
+}
+
+#third_mushroom {
+    width: 16vw;
+    position: relative;
+    top: 5vw;
+    left: 11vw;
 }
 
 #fourth_mushroom {
     width: 19vw;
-    margin-top: -5vw;
-    margin-left: 8vw;
+    position: relative;
+    top: 21vw;
+    left: 5vw;
 }
 
 #narcissus {
-    width: 19vw;
-    margin-top: -21vw;
-    margin-left: -29.5vw;
+    width: 22vw;
+    position: relative;
+    top: 14vw;
+    left: -4vw;
 }
 
 #iris {
     width: 14vw;
-    margin-top: -36vw;
-    margin-left: -29vw;
+    position: relative;
+    top: 1vw;
+    left: -3vw;
 }
 
 #seaweed {
     width: 14vw;
-    margin-top: -28vw;
-    margin-left: -18vw;
+    position: relative;
+    top: -9vw;
+    left: 8vw;
 }
 
 #waterplant {
     width: 16vw;
-    margin-top: 3vw;
-    margin-left: -25vw;
+    position: relative;
+    top: 10vw;
+    left: 1vw;
 }
 
 /* заклинание */
@@ -210,15 +216,106 @@ body {
     margin-top: -18.1vw;
 }
 
+#editable {
+    margin-top: 19.5vw;
+    margin-left: 3.3vw;
+    width: 20vw;
+    height: 9.5vw;
+}
+
+[contenteditable] {
+    outline: 0px solid transparent;
+  }
+
+#editable p {
+    text-align: left;
+}
+
 /* котел */
 
 .pot {
     height: 30vw
 }
 
-.pot_description img {
-    width: 16.2vw;
-    margin-top: 2vw;
+.pot_img img {
+    width: 15.5vw;
+}
+
+.pot_img {
+    margin-top: 1vw;
+    margin-left: 3vw;
+}
+
+#pot_sprite {
+    display: block;
+    position: relative;
+    width: 19.8vw;
+    height: 10.5vw;
+    background-size: 99.2vw 42.1vw;
+    margin-top: -13.3vw;
+    margin-left: -1.9vw;
+    background-image: url('../images/pot_sprite.svg');
+    animation: pot 1s steps(1) infinite; 
+}
+
+@keyframes pot { 
+    0% {
+        background-position: 0 0;
+    }
+    5% {
+        background-position: -19.8vw 0;
+    }
+    10% {
+        background-position: -39.6vw 0;
+    }
+    15% {
+        background-position: -59.4vw 0;
+    }
+    20% {
+        background-position: -79.2vw 0;
+    }
+    25% {
+        background-position: 0 -10.5vw;
+    }
+    30% {
+        background-position: -19.8vw -150.5w;
+    }
+    35% {
+        background-position: -39.6vw -10.5vw;
+    }
+    40% {
+        background-position: -59.4vw -10.5vw;
+    }
+    45% {
+        background-position: -79.2vw -10.5vw;
+    }
+    50% {
+        background-position: 0 -21vw;
+    }
+    55% {
+        background-position: -19.8vw -21vw;
+    }
+    60% {
+        background-position: -39.6vw -21vw;
+    }
+    65% {
+        background-position: -59.4vw -21vw;
+    }
+    70% {
+        background-position: -79.2vw -21vw;
+    }
+    75% {
+        background-position: 0 -31.5vw;
+    }
+    80% {
+        background-position: -19.8vw -31.5vw;
+    }
+    85% {
+        background-position: -39.6vw -31.5vw;
+    }
+    90% {
+        background-position: -59.4vw -31.5vw;
+    }
 }
 
 .pot_description {
@@ -246,7 +343,7 @@ body {
     display: flex;
     flex-direction: row;
     align-self: start;
-    margin-top: -2vw;
+    margin-top: 1vw;
     margin-left: 0.6vw;
 }
 
@@ -257,7 +354,9 @@ body {
 /* профи-колдуны */
 
 .pro {
-    height: 5vw
+    height: 5vw;
+    background-color: #3D3D3D; 
+    border-radius: 1.5vw;
 }
 
 .pro p {
@@ -265,7 +364,9 @@ body {
     font-weight: 400;
     font-size: 1.7vw;
     text-align: center;
-    margin-top: -6.3vw;
+    position: relative;
+    color:#DFDFDF;
+    top: 0.7vw;
 }
 
 /* второй столбик */

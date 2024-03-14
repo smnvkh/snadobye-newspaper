@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="icon" type="image/x-icon" href="images/pot.ico"/>
     <link rel="icon" type="image/png" href="images/pot.png"/>
+    <script src="animation.js"></script>
     <style>
 /* 
         html {
@@ -71,25 +72,22 @@
                     </div>
                     <img src="images/barcode.svg" alt="">
                 </div>
-                <div class="mushrooms_and_flowers">
-                    <div class="mushrooms">
-                        <img id="first_mushroom" src="images/mushroom1.svg" alt="">
-                        <img id="third_mushroom" src="images/mushroom3.svg" alt="">
-                        <img id="second_mushroom" src="images/mushroom2.svg" alt="">
-                        <img id="fourth_mushroom" src="images/mushroom4.svg" alt="">
-                    </div>
-                    <div class="flowers">
-                        <img id="narcissus" src="images/narcissus.svg" alt="">
-                        <img id="iris" src="images/iris.svg" alt="">
-                        <img id="seaweed" src="images/seaweed.svg" alt="">
-                        <img id="waterplant" src="images/waterplant.svg" alt="">
-                    </div>
+                <div class="mushrooms_flowers">
+                    <div class="draggable"><img id="first_mushroom" src="images/mushroom1.svg" alt=""></div>
+                    <div class="draggable"><img id="second_mushroom" src="images/mushroom3.svg" alt=""></div>
+                    <div class="draggable"><img id="third_mushroom" src="images/mushroom2.svg" alt=""></div>
+                    <div class="draggable"><img id="fourth_mushroom" src="images/mushroom4.svg" alt=""></div>
+                    <div class="draggable"><img id="narcissus" src="images/narcissus.svg" alt=""></div>
+                    <div class="draggable"><img id="iris" src="images/iris.svg" alt=""></div>
+                    <div class="draggable"><img id="seaweed" src="images/seaweed.svg" alt=""></div>
+                    <div class="draggable"><img id="waterplant" src="images/waterplant.svg" alt=""></div>
                 </div>
             </div>
             <div class="spell">
                 <img src="images/spell.svg" alt="">
                 <p>напиши здесь заклинание, <br> 
                     и оно мгновенно сбудется!</p>
+                <div id="editable"><p contenteditable="true">заклинаю...</p></div>
             </div>
             <div class="pot">
                 <img src="images/potion.svg" alt="">
@@ -98,7 +96,10 @@
                         эффективное зелье?</div>
                     <div class="pot_subtitle">посетите наши кулинарные курсы <br>
                         и научитесь создавать их сами!</div>
-                    <div><img src="images/pot.svg" alt=""></div>
+                    <div class="pot_img">
+                        <img src="images/pot.svg" alt="">
+                        <div id="pot_sprite"></div>
+                    </div>
                     <div class="pot_adress">
                         <div id="pot_name">«тайный эликсир»</div>
                         <div id="pot_street">ул. чудес, 13</div>
@@ -106,7 +107,7 @@
                 </div>
             </div>
             <div class="pro">
-                <img src="images/pro.svg" alt="">
+                <!-- <img src="images/pro.svg" alt=""> -->
                 <p>профи-колдуны <br>
                     +798128938277</p>
             </div>
