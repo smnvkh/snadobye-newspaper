@@ -50,4 +50,119 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
+    // искры из котла
+    
+    const pot = document.querySelector('.pot');
+    const pot_img = document.querySelector('.pot_img');
+
+    pot.addEventListener('click', () => {
+      const stars = document.createElement ('div')
+      stars.classList.add('greenstars')
+      stars.innerHTML = '<img src="images/stars.svg">'
+
+      pot_img.appendChild(stars)
+      setTimeout (() => {
+        stars.remove()
+      }, 600)
+    })
+
+    // модальное окно для левой бутылки 
+
+    var modal = document.getElementById("first_modal");
+    var btn = document.getElementById("left_potion");
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function() {
+      modal.style.display = "block";
+
+      btn.onclick = function() {
+        modal.style.display = "block";
+      }
+
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    }
+
+    // модальное окно для центральной бутылки 
+
+    var modal2 = document.getElementById("second_modal");
+    var btn2 = document.getElementById("mid_potion");
+    var span2 = document.getElementsByClassName("close_second")[0];
+
+    btn2.onclick = function() {
+      modal2.style.display = "block";
+
+      btn2.onclick = function() {
+        modal2.style.display = "block";
+      }
+
+      span2.onclick = function() {
+        modal2.style.display = "none";
+      }
+
+      window.onclick = function(event) {
+        if (event.target == modal2) {
+          modal2.style.display = "none";
+        }
+      }
+    }
+
+        // модальное окно для центральной бутылки 
+
+        var modal3 = document.getElementById("third_modal");
+        var btn3 = document.getElementById("right_potion");
+        var span3 = document.getElementsByClassName("close_third")[0];
+    
+        btn3.onclick = function() {
+          modal3.style.display = "block";
+    
+          btn3.onclick = function() {
+            modal3.style.display = "block";
+          }
+    
+          span3.onclick = function() {
+            modal3.style.display = "none";
+          }
+    
+          window.onclick = function(event) {
+            if (event.target == modal3) {
+              modal3.style.display = "none";
+            }
+          }
+        }
 })
+
+    // рука поднимает рюмку 
+
+    function animation() {
+      let hand = document.querySelector('.stars_hand');
+      hand.addEventListener('click', animationStart);
+    }
+    
+    function animationStart() {
+      let hand = document.querySelector('.hand');
+      hand.classList.remove('hand');
+      setTimeout(() => {
+        hand.classList.add('handAnimation');
+      }, 0);
+    }
+
+    function animationStart() {
+      let hand = document.querySelector('.glass');
+      hand.classList.remove('glass');
+      setTimeout(() => {
+        hand.classList.add('glassAnimation');
+      }, 0);
+    }
+    
+    document.addEventListener('DOMContentLoaded', () => {
+      animation();
+    });
+
