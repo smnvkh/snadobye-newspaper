@@ -3,6 +3,7 @@ body {
     font-family: 'Ubuntu';
     font-weight: 300;
     color: #3D3D3D; 
+    overflow-x:hidden;
 }
 
 .header {
@@ -427,8 +428,6 @@ body {
     top: 0.8vw;
 }
 
-.pro_number p
-
 /* второй столбик */
 
 .fortune, .fortune img, .healing, .stars, .stars img, .market, .market img, .lawyer, .lawyer img {
@@ -481,11 +480,21 @@ body {
     margin-top: -18.8vw;
 }
 
+.magicball_response {
+    font-family: 'Dudka';
+    font-weight: 400;
+    font-size: 1.5vw;
+    color: #3D3D3D;
+    margin-top: -16.5vw;
+    margin-left: 21.5vw;
+    text-align: center;
+}
+
 .divination_adress {
     display: flex;
     flex-direction: row;
     align-items: start;
-    margin-top: -4vw;
+    margin-top: 4vw;
     margin-left: 1vw;
 }
 
@@ -562,7 +571,7 @@ body {
 }
 
 .hand {
-    margin-top: -39.1vw;
+    margin-top: -39.3vw;
     margin-left: 1.5vw;
 }
 
@@ -721,14 +730,41 @@ body {
     margin-bottom: 1.5vw;
 }
 
+.frog_text {
+    font-family: 'ubuntu';
+    font-weight: 400;
+    font-size: 1.5vw;
+    text-align: left;
+    margin-left: 21vw;
+    margin-top: -18vw;
+}
+
 .frog img {
     width: 24vw;
 }
 
 .frog {
     margin-left: 13vw;
-    margin-top: -24vw;
+    margin-top: -10vw;
 }
+
+.frog_animation {
+    margin-left: 13vw;
+    margin-top: -10vw;
+    animation: frog 2s ease forwards;
+}
+
+.frog_animation img {
+    width: 24vw;
+}
+
+@keyframes frog {
+    0% { transform: rotate(0); transform-origin: top left; animation-timing-function: ease-in-out; }  
+    20%, 60% { transform: rotate(80deg); transform-origin: top left; animation-timing-function: ease-in-out; }  
+    40% { transform: rotate(60deg); transform-origin: top left; animation-timing-function: ease-in-out; } 
+    80% { transform: rotate(60deg) translateY(0); opacity: 1; transform-origin: top left; animation-timing-function: ease-in-out; } 
+    100% { transform: translateX(-165vw); opacity: 0; }
+  }
 
 /* скидка на все отвары */
 
@@ -788,7 +824,7 @@ body {
 }
 
 /* модальное окошко для левой бутылки */
-.first_modal {
+.first_modal, .second_modal, .third_modal {
     display: none; 
     position: fixed;
     z-index: 1;
@@ -802,13 +838,14 @@ body {
   }
   
   /* Modal Content/Box */
-  .first_modal_content {
+  .first_modal_content, .second_modal_content, .third_modal_content {
     background-color: #DFDFDF;
-    margin: 30% auto;
-    padding: 20px;
-    width: 50%; 
-    height: 33%;
+    margin: 30vw auto;
+    padding: 2vw;
+    width: 50vw;
+    height: 29vw;
     text-align: center;
+    border: 0.2vw solid #3d3d3d;
   }
 
   .modal_left img {
@@ -834,28 +871,6 @@ body {
   }
 
   /* модальное окошко для центральной бутылки */
-.second_modal {
-    display: none; 
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
-  }
-  
-  /* Modal Content/Box */
-  .second_modal_content {
-    background-color: #DFDFDF;
-    margin: 30% auto;
-    padding: 20px;
-    width: 50%; 
-    height: 33%;
-    text-align: center;
-  }
 
   .modal_mid img {
     width: 13vw;
@@ -880,28 +895,6 @@ body {
   }
 
     /* модальное окошко для правой бутылки */
-.third_modal {
-    display: none; 
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
-  }
-  
-  /* Modal Content/Box */
-  .third_modal_content {
-    background-color: #DFDFDF;
-    margin: 30% auto;
-    padding: 20px;
-    width: 50%; 
-    height: 33%;
-    text-align: center;
-  }
 
   .modal_right img {
     width: 7vw;
@@ -929,7 +922,7 @@ body {
   .close, .close_second, .close_third {
     color: #3d3d3d;
     float: right;
-    font-size: 28px;
+    font-size: 3vw;
     font-weight: bold;
   }
   
@@ -940,21 +933,24 @@ cursor: pointer;
 
 /* таро дня */
 
-.tarot {
+.tarot, .tarot_back {
     height: 43vw;
 }
 
-.tarot_description {
+.tarot_description, .tarot_back_description {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: 'Kazimir';
+}
+
+.tarot_description, #tarot_back_title, #tarot_back_number {
     font-weight: 500;
     font-size: 3vw;
     color: #DFDFDF;
 }
 
-#tarot_number {
+#tarot_number, #tarot_back_number  {
     margin-top: -44.7vw;
 }
 
@@ -964,10 +960,101 @@ cursor: pointer;
     margin-left: 2vw;
 }
 
-#tarot_title {
+#tarot_title  {
     margin-top: 0.2vw;
 }
 
+/* обратная сторона */
+
+#tarot_back_header {
+    font-weight: 500;
+    font-size: 2.4vw;
+    color: #3d3d3d;
+    margin-top: 2vw;
+}
+
+#tarot_back_text {
+    font-family: 'Ubuntu';
+    font-weight: 300;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 0.6vw;
+    font-size: 1.3vw;
+    text-align: center;
+    color: #3d3d3d;
+}
+
+#tarot_back_title {
+    margin-top: 2.5vw;
+}
+
+#tarot_back_flower {
+    display: block;
+    position: relative;
+    width: 17.3vw;
+    height: 18.1vw;
+    top: 1.5vw;
+    background-size: 69.5vw 36.1vw;
+    background-image: url('../images/narcissus_sprite.svg');
+    animation: narcissus 1s steps(1) infinite; 
+}
+
+@keyframes narcissus { 
+    0% {
+        background-position: 0 0;
+    }
+    12% {
+        background-position: -17.3vw 0;
+    }
+    24% {
+        background-position: -34.6vw 0;
+    }
+    36% {
+        background-position: -51.9vw 0;
+    }
+    48% {
+        background-position: 0 -18.1vw;
+    }
+    60% {
+        background-position: -17.3vw -18.1vw;
+    }
+    72% {
+        background-position: -34.6vw -18.1vw;
+    }
+    84% {
+        background-position: -51.9vw -18.1vw;
+    }
+}
+
+/* флип кард анимация   */
+
+.tarot {
+    background-color: transparent;
+    width: 26.5vw;
+    height: 43vw;
+    perspective: 1000px;
+  }
+  
+.tarot_inner {
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+.tarot:hover .tarot_inner {
+    transform: rotateY(180deg);
+  }
+  
+  .tarot_front, .tarot_back {
+    position: absolute;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+
+  .tarot_back {
+    transform: rotateY(180deg);
+  }
+  
 /* требуется приворот */
 
 .lovespell {
@@ -1002,6 +1089,107 @@ cursor: pointer;
     margin-right: 0.3vw;
 }
 
+#left_insect:hover, #right_insect:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(0.1vw, 0.1vw) rotate(0deg); }
+    10% { transform: translate(-0.1vw, -0.2vw) rotate(-1deg); }
+    20% { transform: translate(-0.3vw, 0vw) rotate(1deg); }
+    30% { transform: translate(0.3vw, 0.2vw) rotate(0deg); }
+    40% { transform: translate(0.1vw, -0.1vw) rotate(1deg); }
+    50% { transform: translate(-0.1vw, 0.2vw) rotate(-1deg); }
+    60% { transform: translate(-0.3vw, 0.1vw) rotate(0deg); }
+    70% { transform: translate(0.3vw, 0.1vw) rotate(-1deg); }
+    80% { transform: translate(-0.1vw, -0.1vw) rotate(1deg); }
+    90% { transform: translate(0.1vw, 0.2vw) rotate(0deg); }
+    100% { transform: translate(0.1vw, -0.2vw) rotate(-1deg); }
+  }
+
+/* большие насекомые */
+
+/* насекомые  */
+
+.butterfly {
+    opacity: 0;
+    margin-top: -48vw;
+}
+
+.butterfly_animation {
+    display: block;
+    animation: butterfly 3s ease-in-out;
+    width: 15vw;
+    height: 15vw;
+    margin-top: -48vw;
+    margin-left: -100vw;
+}
+
+
+@keyframes butterfly {
+    0% {
+        transform: translate(0vw, -1vw);
+    }
+    100% {
+        transform: translate(140vw, 2.6vw);
+    }
+}
+
+.dragonfly {
+    opacity: 0;
+    width: 15vw;
+    height: 15vw;
+    margin-top: -24vw;
+    margin-left: -120vw;
+}
+
+.dragonfly_animation {
+    display: block;
+    animation: dragonfly 4s ease-in-out;
+    width: 15vw;
+    height: 15vw;
+    margin-top: -24vw;
+    margin-left: -120vw;
+}
+
+@keyframes dragonfly {
+    0% {
+        transform: translate(0vw, 7vw);
+    }
+    100% {
+        transform: translate(160vw, -4vw);
+    }
+}
+
+.beetle {
+    opacity: 0;
+    width: 28vw;
+    height: 28vw;
+    margin-left: -25vw;
+    margin-top: -15vw;
+}
+
+.beetle_animation {
+    display: block;
+    animation: beetle 4s ease-in-out;
+    width: 28vw;
+    height: 28vw;
+    margin-left: 29vw;
+    margin-top: -15vw;
+}
+
+@keyframes beetle {
+    0% {
+        transform: translate(0vw, -1vw);
+    }
+    100% {
+        transform: translate(-140vw, 3vw);
+    }
+}
+
+/* описание карточки с жуками */
+
 .lovespell_title img {
     width: 16vw;
     margin-left: 5vw;
@@ -1031,6 +1219,27 @@ cursor: pointer;
     flex-direction: column;
 }
 
+.flowers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 22vw;
+    margin-top: 2.5vw;
+    margin-left: 2.1vw;
+}
+
+.left_flower img {
+    width: 8vw;
+}
+
+.central_flower img {
+    width: 5vw;
+}
+
+.right_flower img {
+    width: 7vw;
+}
+
 .drawing_title {
     font-family: 'CATLinz';
     font-weight: 400;
@@ -1044,7 +1253,7 @@ cursor: pointer;
     flex-direction: row;
     justify-content: space-between;
     font-size: 0.9vw;
-    margin-top: 11.6vw;
+    margin-top: -1vw;
 }
 
 #drawing_name {

@@ -125,8 +125,10 @@
                                 и получите ответ <br>
                                 на ваш вопрос</div>
                         </div>
-                        <div class="magicball"><img src="images/magicball.svg" alt=""></div>
-                        <div class="random"></div>
+                        <div class="magicball" id="mb_container">
+                            <img src="images/magicball.svg" alt="">
+                            <div class="magicball_response" id="response"><p>возможно</p></div>
+                        </div>
                     </div>
                     <div class="divination_adress">
                         <div id="divination_phone">+791249349035</div>
@@ -190,6 +192,7 @@
                             когда посчитает <br>
                             это нужным</p></div>
                     </div>
+                    <div class="frog_text"><p>увы, жаба <br> снова в отпуске</p></div>
                     <div class="frog"><img src="images/frog.svg" alt=""></div>
                 </div>
             </div>
@@ -247,14 +250,30 @@
                 </div>
                 <div class="discount_adress">травнический магазин «королевство ведьм»</div>
             </div>
-            <div class="tarot">
-                <img src="images/tarot.svg" alt="">
-                <div class="tarot_description">
-                    <div id="tarot_number">XI</div>
-                    <div id="tarot_flower"><img src="images/pansy.svg" alt=""></div>
-                    <div id="tarot_title">карта дня</div>
-                </div>
             </div>
+            <div class="tarot">
+                <div class="tarot_inner">
+                  <div class="tarot_front">
+                    <img src="images/tarot.svg">
+                    <div class="tarot_description">
+                        <div id="tarot_number">II</div>
+                        <div id="tarot_flower"><img src="images/pansy.svg" alt=""></div>
+                        <div id="tarot_title">карта дня</div>
+                    </div>
+                  </div>
+                  <div class="tarot_back">
+                    <img src="images/tarot_back.svg">
+                    <div class="tarot_back_description">
+                        <div id="tarot_back_number">II</div>
+                        <div id="tarot_back_header">двойка кубков</div>
+                        <div id="tarot_back_text">Ощущение эмоционального подъема, душевного комфорта <br> и сердечности будет сопровождать вас до самого вечера. Именно <br> в этот день велика вероятность встретить большую любовь, наладить пошатнувшиеся 
+                            или нестабильные взаимоотношения.</div>
+                        <div id="tarot_back_flower"></div>
+                        <div id="tarot_back_title">карта дня</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             <div class="lovespell">
                 <img src="images/insects.svg" alt="">
                 <div class="lovespell_description">
@@ -271,12 +290,22 @@
                         вам привлечь долгожданную любовь!</p>
                     </div>
                     <div class="lovespell_phone"><p>+791473577836487</p></div>
+                    <div class="biginsects"> 
+                        <div class="butterfly"><img src="images/butterfly.svg" alt=""></div>
+                        <div class="beetle"><img src="images/beetle.svg" alt=""></div>
+                        <div class="dragonfly"><img src="images/dragonfly.svg" alt=""></div>
+                    </div>
                 </div>
             </div>
             <div class="drawing">
                 <img src="images/drawing.svg" alt="">
                 <div class="drawing_description">
-                    <div class="drawing_title"><p>нарисуй цветок и получи его в подарок</p></div>
+                    <div class="drawing_title"><p>выбери цветок и получи его в подарок</p></div>
+                    <div class="flowers">
+                        <div class="left_flower"><img src="images/leftflower.svg" alt=""></div>
+                        <div class="central_flower"><img src="images/centralflower.svg" alt=""></div>
+                        <div class="right_flower"><img src="images/rightflower.svg" alt=""></div>
+                    </div>
                     <div class="drawing_adress">
                         <div id="drawing_name"><p>магазин трав</p></div>
                         <div id="drawing_street"><p>ул. полыни, 9</p></div>
