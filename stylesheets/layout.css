@@ -337,7 +337,7 @@ body {
         background-position: 0 -10.5vw;
     }
     30% {
-        background-position: -19.8vw -150.5w;
+        background-position: -19.8vw -10.5vw;
     }
     35% {
         background-position: -39.6vw -10.5vw;
@@ -414,8 +414,6 @@ body {
 
 .pro {
     height: 5vw;
-    background-color: #547629; 
-    border-radius: 1.5vw;
 }
 
 .pro p {
@@ -424,8 +422,8 @@ body {
     font-size: 1.7vw;
     text-align: center;
     position: relative;
-    color:#DFDFDF;
-    top: 0.8vw;
+    color:#3d3d3d;
+    top: -6.3vw;
 }
 
 /* второй столбик */
@@ -473,6 +471,22 @@ body {
     font-size: 1.7vw;
     margin-left: 2vw;
 }
+
+.magicball {
+    animation: ball 3s ease infinite;
+}
+
+.magicball:hover {
+    animation: paused;
+}
+
+@keyframes ball {
+    30% { transform: scale(1.2); }
+    40%, 60% { transform: rotate(-20deg) scale(1.2); }
+    50% { transform: rotate(20deg) scale(1.2); }
+    70% { transform: rotate(0deg) scale(1.2); }
+    100% { transform: scale(1); }
+  }
 
 .magicball img {
     width: 15vw;
@@ -529,11 +543,35 @@ body {
     margin-right: -7vw;
 }
 
-#healing_heartplant img {
+#healing_heartplant {
+    display: block;
+    position: relative;
     width: 14vw;
+    height: 13.4vw;
+    background-size: 70vw 13.4vw;
     margin-right: -7vw;
     margin-top: -4.7vw;
+    background-image: url('../images/heartplant_sprite.svg');
+    animation: heartplant 1s steps(1) infinite; 
 }
+
+@keyframes heartplant {
+    0% {
+        background-position: 0 0;
+    }
+    20% {
+        background-position: 14vw 0;
+    }
+    40% {
+        background-position: 28vw 0;
+    }
+    60% {
+        background-position: 42vw 0;
+    }
+    80% {
+        background-position: 56vw 0;
+    }
+} 
 
 #healing_street {
     font-size: 0.9vw;
@@ -580,7 +618,15 @@ body {
     flex-direction: row;
     margin-top: -32vw;
     margin-left: 20.9vw;
+    animation: gelatine 0.5s infinite;
 }
+
+@keyframes gelatine {
+    from, to { transform: scale(1, 1); }
+    25% { transform: scale(0.9, 1.1); }
+    50% { transform: scale(1.1, 0.9); }
+    75% { transform: scale(0.95, 1.05); }
+  }
   
 .handAnimation {
     margin-top: -39.1vw;
@@ -804,10 +850,18 @@ body {
     margin-top: 2.6vw;
 }
 
+#left_potion:hover {
+    transform: scale(1.5);
+  }
+
 #mid_potion img {
     width: 7.7vw;
     margin-top: 2.6vw;
 }
+
+#mid_potion:hover {
+    transform: scale(1.5);
+  }
 
 #right_potion img {
     width: 3.8vw;
@@ -817,6 +871,10 @@ body {
 #right_potion {
     margin-left: 1vw;
 }
+
+#right_potion:hover {
+    transform: scale(1.5);
+  }
 
 .discount_adress {
     font-size: 1vw;
@@ -928,7 +986,7 @@ body {
   
   .close, .close_second, .close_third:hover,
   .close, .close_second, .close_third:focus {
-cursor: pointer;
+    cursor: pointer;
   }
 
 /* таро дня */
@@ -954,11 +1012,62 @@ cursor: pointer;
     margin-top: -44.7vw;
 }
 
-#tarot_flower img {
-    width: 22vw;
-    margin-top: 2.5vw;
+#tarot_flower {
+    display: block;
+    position: relative;
+    width: 21vw;
+    height: 35vw;
+    background-size: 147vw 69.7vw;
+    margin-top: 1vw;
     margin-left: 2vw;
+    background-image: url('../images/tarot_sprite.svg');
+    animation: tarot 3s steps(1) infinite; 
 }
+
+@keyframes tarot {
+    0% {
+        background-position: 0 0;
+    }
+    7% {
+        background-position: 21vw 0;
+    }
+    14% {
+        background-position: 42vw 0;
+    }
+    21% {
+        background-position: 63vw 0;
+    }
+    28% {
+        background-position: 84vw 0;
+    }
+    35% {
+        background-position: 105vw 0;
+    }
+    42% {
+        background-position: 126vw 0;
+    }
+    49% {
+        background-position: 0 35vw;
+    }
+    56% {
+        background-position: 21vw 35vw;
+    }
+    63% {
+        background-position: 42vw 35vw;
+    }
+    70% {
+        background-position: 63vw 35vw;
+    }
+    77% {
+        background-position: 84vw 35vw;
+    }
+    81% {
+        background-position: 105vw 35vw;
+    }
+    88% {
+        background-position: 126vw 35vw;
+    }
+} 
 
 #tarot_title  {
     margin-top: 0.2vw;
@@ -1208,7 +1317,7 @@ cursor: pointer;
     margin-left: 7.5vw;
 }
 
-/* нарисуй цветок */
+/* выбери цветок */
 
 .drawing {
     height: 17.6vw;
@@ -1230,6 +1339,7 @@ cursor: pointer;
 
 .left_flower img {
     width: 8vw;
+    animation: left_flower 2s ease infinite;
 }
 
 .central_flower img {
@@ -1239,6 +1349,37 @@ cursor: pointer;
 .right_flower img {
     width: 7vw;
 }
+
+.left_flower {
+    animation: left_flower 2s ease infinite;
+  }
+
+@keyframes left_flower {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-1.2vw);}
+    60% {transform: translateY(-0.5vw);}
+  }
+
+.central_flower {
+    animation: central_flower 2s ease infinite;
+  }
+
+@keyframes central_flower {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-2vw);}
+    60% {transform: translateY(-1vw);}
+  }
+
+.right_flower {
+    animation: right_flower 2s ease infinite;
+  }
+
+@keyframes right_flower {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-2vw);}
+    60% {transform: translateY(-1vw);}
+  }
+
 
 .drawing_title {
     font-family: 'CATLinz';
@@ -1274,4 +1415,612 @@ cursor: pointer;
     flex-direction: row;
     justify-content: space-between;
     margin: 2vw 2.2vw 2vw;
+}
+
+@media only screen and (min-width: 1023px) {
+    .mushrooms_flowers, .spell, .pot_img, .magicball, .stars_hand, .frog, #left_potion, #mid_potion, #right_potion, #left_insect, #right_insect, .left_flower, .central_flower, .right_flower {
+        cursor: url(../images/wand.png), pointer;
+    }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 1023px) {
+    .snake img:hover {
+        transform: none;
+      }
+
+    .magicball:hover {
+        animation: none;
+    }
+
+    #left_potion:hover {
+        transform: none;
+      }
+
+    #mid_potion:hover {
+        transform: none;
+      }
+
+    #right_potion:hover {
+        transform: none;
+      }
+
+    .close, .close_second, .close_third:hover,
+    .close, .close_second, .close_third:focus {
+        cursor: default;
+      }
+    
+    tarot:hover .tarot_inner {
+        transform: none;
+      }
+
+    #left_insect:hover, #right_insect:hover {
+        animation: none;
+    }
+
+    .magicball {
+        animation: none;
+    }
+
+    .tarot_front {
+        opacity: 0;
+    }
+
+    #tarot_flower {
+        animation: none;
+    }
+
+    .tarot {
+        background-color: transparent;
+        width: 26.5vw;
+        height: 43vw;
+        perspective: 0;
+      }
+    
+    .tarot_inner {
+        position: relative;
+        transition: none;
+        transform-style: none;
+      }
+
+    .tarot:hover .tarot_inner {
+        transform: none;
+      }
+
+    .tarot_back {
+        position: absolute;
+        -webkit-backface-visibility: visible; /* Safari */
+        backface-visibility: visible;
+      }
+    
+    .tarot_back {
+        transform: none;
+      }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 767px) {
+    .second_column {
+        display: none;
+    }
+
+    .running_title {
+        font-size: 3vw;
+        margin: 3vw 7vw 0;
+    }
+    
+    .title {
+        font-size: 15.5vw;
+        margin: 4vw 0 0 14vw;
+    }
+    
+    .subtitle {
+        font-size: 4vw;
+        margin-left: 24vw;
+    }
+    
+    .columns {
+        margin: 5.5vw 6vw 0;
+    }
+    
+    /* левая и правая колонки */
+    
+    .snake, .snake img, .coupon, .coupon img, .spell, .spell img, .pot, .pot img, .pro, .pro img, .discount, .discount img, .tarot, .tarot img, .lovespell, .lovespell img, .drawing, .drawing img {
+        width: 42vw;
+        margin-bottom: 27.1vw;
+    }
+    
+    /* шепот змеи */
+    
+    .snake {
+        height: 24vw;
+    }
+    
+    .snake_description {
+        margin: -45vw 4vw 0 8vw;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .snake_title {
+        font-size: 5.4vw;
+    }
+    
+    .snake_subtitle {
+        margin-top: 0.4vw;
+        margin-left: 1.3vw;
+        font-size: 2vw;
+    }
+    
+    .snake_adress {
+        font-size: 1.5vw;
+        margin: 2vw 1.5vw 0 -1.5vw;
+    }
+    
+    /* купон на скидку */
+    
+    .coupon {
+        height: 81vw;
+        margin-top: -26vw;
+    }
+    
+    .coupon_description {
+        margin: -104vw 0 0 1.3vw;
+    }
+    
+    .coupon_title {
+        font-size: 6vw;
+    }
+    
+    .coupon_percent {
+        font-size: 23vw;
+    }
+    
+    .coupon_subtitle {
+        font-size: 4vw;
+        margin-top: -2.3vw;
+    }
+    
+    .coupon_text {
+        font-size: 2.2vw;
+        margin-top: 3vw;
+    }
+    
+    .coupon_adress {
+        font-size: 1.4vw;
+        margin-top: 6.5vw;
+    }
+    
+    #coupon_floor {
+        margin-left: 22vw;
+    }
+    
+    .coupon_description img {
+        width: 27vw;
+        margin-top: 5vw;
+    }
+    
+    /* грибы и цветы */
+    
+    .draggable {
+        position: absolute;
+        top: 85vw;
+        left: 15vw;
+    }
+    
+    #first_mushroom {
+        width: 29vw;
+        top: -20vw;
+        left: -11vw;
+    }
+    
+    #second_mushroom {
+        width: 27vw;
+        top: -17vw;
+        left: 6vw;
+    }
+    
+    #third_mushroom {
+        width: 20vw;
+        top: 7vw;
+        left: 15vw;
+    }
+    
+    #fourth_mushroom {
+        width: 27vw;
+        top: 33vw;
+        left: 6vw;
+    }
+    
+    #narcissus {
+        width: 30vw;
+        top: 23vw;
+        left: -10vw;
+    }
+    
+    #iris {
+        width: 20vw;
+        top: 1vw;
+        left: -9vw;
+    }
+    
+    #seaweed {
+        width: 20vw;
+        position: relative;
+        top: 16vw;
+        left: 2vw;
+    }
+    
+    #waterplant {
+        width: 20vw;
+        top: 1vw;
+        left: 9vw;
+    }
+    
+    /* заклинание */
+    
+    .spell {
+        height: 17vw;
+        margin-top: -25vw;
+    }
+    
+    .spell p {
+        font-size: 1.7vw;
+        margin-top: -52.5vw;
+    }
+    
+    #editable {
+        margin-top: 54vw;
+        margin-left: 5vw;
+        width: 33vw;
+        height: 15vw;
+    }
+    
+    /* котел */
+    
+    .pot {
+        height: 48vw;
+        margin-top: -14vw;
+    }
+    
+    .pot_img img {
+        width: 23.2vw;
+    }
+    
+    .pot_img {
+        margin-top: 3vw;
+        margin-left: 4vw;
+    }
+    
+    .greenstars img {
+        width: 20vw;
+    }
+    
+    .greenstars {
+        position: absolute;
+        opacity: 0;
+        top: 178vw;
+        right: 65vw;
+    }
+    
+    #pot_sprite {
+        width: 29.7vw;
+        height: 15.7vw;
+        background-size: 148.8vw 63.1vw;
+        margin-top: -44.5vw;
+        margin-left: -3vw;
+    }
+    
+    @keyframes pot { 
+        0% {
+            background-position: 0 0;
+        }
+        5% {
+            background-position: -29.7vw 0;
+        }
+        10% {
+            background-position: -59.4vw 0;
+        }
+        15% {
+            background-position: -89.1vw 0;
+        }
+        20% {
+            background-position: -118.8vw 0;
+        }
+        25% {
+            background-position: 0 -15.7vw;
+        }
+        30% {
+            background-position: -29.7vw -15.7vw;
+        }
+        35% {
+            background-position: -59.4vw -15.7vw;
+        }
+        40% {
+            background-position: -89.1vw -15.7vw;
+        }
+        45% {
+            background-position: -118.8vw -15.7vw;
+        }
+        50% {
+            background-position: 0 -31.4vw;
+        }
+        55% {
+            background-position: -29.7vw -31.4vw;
+        }
+        60% {
+            background-position: -59.4vw -31.4vw;
+        }
+        65% {
+            background-position: -89.1vw -31.4vw;
+        }
+        70% {
+            background-position: -118.8vw -31.4vw;
+        }
+        75% {
+            background-position: 0 -47.1vw;
+        }
+        80% {
+            background-position: -29.7vw -47.1vw;
+        }
+        85% {
+            background-position: -59.4vw -47.1vw;
+        }
+        90% {
+            background-position: -89.1vw -47.1vw;
+        }
+    }
+    
+    .pot_description {
+        margin: -72vw 1.4vw 0;
+    }
+    
+    .pot_title {
+        font-size: 3.5vw;
+    }
+    
+    .pot_subtitle {
+        font-size: 2.3vw;
+        margin-top: 1.5vw;
+    }
+    
+    .pot_adress {
+        font-size: 1.5vw;
+        margin-left: 2.5vw;
+    }
+    
+    #pot_street {
+        margin-left: 13vw;
+    }
+    
+    /* профи-колдуны */
+    
+    .pro {
+        height: 8vw;
+        margin-top: -24vw;
+    }
+    
+    .pro p {
+        font-size: 2.5vw;
+        top: -34vw;
+    }
+
+    /* 3 столбик */
+    
+        /* 3 столбик */
+    
+        .discount {
+            height: 62vw;
+        }
+        
+        .discount_title {
+            font-size: 9vw;
+            margin-top: -81vw;
+        }
+        
+        .discount_subtitle {
+            font-size: 3vw;
+        }
+        
+        #left_potion img {
+            width: 9.9vw;
+            margin-top: 4vw;
+        }
+        
+        #mid_potion img {
+            width: 11.5vw;
+            margin-top: 4vw;
+        }
+        
+        #right_potion img {
+            width: 5.7vw;
+            margin-top: 4vw;
+        }
+        
+        .discount_adress {
+            font-size: 1.5vw;
+            margin-top: -23.3vw;
+        }
+    
+        .modal_left img {
+            width: 11vw;
+            margin-top: 2vw;
+            margin-left: -37vw;
+          }
+    
+        #sumrak {
+            margin-top: -54vw;
+        }
+    
+        .modal_mid img {
+            width: 13vw;
+          }
+        
+        #spring {
+            margin-top: -54.5vw;
+          }
+        
+        #memory {
+            margin-top: -55vw;
+        }
+    
+        .modal_right img {
+            width: 7vw;
+          }
+
+        /* таро дня  */
+
+        .tarot, .tarot_back {
+            height: 68vw;
+            margin-top: -12vw;
+        }
+
+        .tarot_description, #tarot_back_title, #tarot_back_number {
+            font-size: 5vw;
+            margin-top: -94.8vw;
+        }
+
+        #tarot_back_header {
+            font-size: 3.5vw;
+            margin-top: 3vw;
+        }
+        
+        #tarot_back_text {
+            padding-left: 3vw;
+            padding-right: 3vw;
+            padding-top: 1.5vw;
+            font-size: 2.1vw;
+        }
+
+        #tarot_back_flower {
+            display: block;
+            position: relative;
+            width: 26vw;
+            height: 27vw;
+            top: 1.5vw;
+            background-size: 104.6vw 54.1vw;
+        }
+
+        @keyframes narcissus { 
+            0% {
+                background-position: 0 0;
+            }
+            12% {
+                background-position: -26vw 0;
+            }
+            24% {
+                background-position: -52vw 0;
+            }
+            36% {
+                background-position: -51.9vw 0;
+            }
+            48% {
+                background-position: 0 -27vw;
+            }
+            60% {
+                background-position: -26vw -27vw;
+            }
+            72% {
+                background-position: -52vw -27vw;
+            }
+            84% {
+                background-position: -78vw -27vw;
+            }
+        }
+        
+        #tarot_back_title {
+            margin-top: 4.8vw;
+        }
+
+        /* насекомые */
+
+        .lovespell {
+            height: 19.4vw;
+        }
+        
+        .lovespell img {
+            margin-top: -36vw;
+        }
+
+        .lovespell_title img {
+            width: 28vw;
+            margin-left: 7vw;
+            margin-bottom: 28vw;
+        }
+        
+        .insects {
+            margin-top: -24vw;
+        }
+        
+        .insects img {
+            width: 13vw;
+        }
+        
+        #left_insect {
+            margin-left: 0.3vw;
+        }
+        
+        #right_insect {
+            margin-right: 0.3vw;
+        }
+
+        .lovespell_subtitle {
+            font-size: 2vw;
+            margin-top: -28vw;
+        }
+        
+        .lovespell_phone {
+            font-size: 2vw;
+            margin-top: 2vw;
+            margin-left: 11.5vw;        
+        }
+
+        /* цветы  */
+
+        .drawing {
+            height: 17.6vw;
+            margin-top: -49vw;
+        }
+
+        .drawing_title {
+            font-size: 2.3vw;
+            margin: -52vw 2vw 0
+        }
+        
+        .drawing_adress {
+            font-size: 1.8vw;
+            margin-top: -27vw;
+        }
+        
+        .flowers {
+            width: 22vw;
+            margin-left: 4vw;
+        }
+        
+        .left_flower img {
+            width: 13vw;
+        }
+        
+        .central_flower img {
+            width: 9vw;
+        }
+        
+        .right_flower img {
+            width: 11vw;
+        }
+        
+        #drawing_name {
+            margin-left: 3.5vw;
+        }
+        
+        #drawing_street {
+            margin-right: 3.5vw;
+        }
+        .footer {
+            font-size: 3vw;
+            margin: -22vw 6vw 0;
+            overflow: hidden;
+        }
+
+        body {
+            height: 50vh;
+        }
 }
